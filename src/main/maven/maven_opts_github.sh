@@ -1,11 +1,11 @@
 
 
-#GIT_SERVICE_HOST=in .travis.yml
+#GIT_SERVICE_HOST in .travis.yml
 
 # TODO publish to docker-hub
-export DOCKER_REGISTRY="dockerhub"
-# TODO github maven site
-export MAVEN_OPTS="${MAVEN_OPTS} -Dgithub-mvnsite.prefix="
+export DOCKER_REGISTRY=""
+
+
 #export MAVEN_OPTS="${MAVEN_OPTS} -Dgithub-nexus.mirror=no mirror"
 export MAVEN_OPTS="${MAVEN_OPTS} -Dgithub-nexus.repositories=https://oss.sonatype.org/content/repositories"
 #export MAVEN_OPTS="${MAVEN_OPTS} -Dgithub-sonar.host.url=https://sonarqube.com"
@@ -17,7 +17,7 @@ export MAVEN_OPTS="${MAVEN_OPTS} -Ddocker.registry=${DOCKER_REGISTRY}"
 export MAVEN_OPTS="${MAVEN_OPTS} -Dsite=${BUILD_SITE}"
 export MAVEN_OPTS="${MAVEN_OPTS} -Duser.language=zh -Duser.region=CN -Dfile.encoding=UTF-8 -Duser.timezone=Asia/Shanghai"
 export MAVEN_OPTS="${MAVEN_OPTS} -Dmaven.test.failure.ignore=${BUILD_TEST_FAILURE_IGNORE}"
-export MAVEN_OPTS="${MAVEN_OPTS} -Dfrontend.nodeDownloadRoot=https://npm.taobao.org/mirrors/node/"
-export MAVEN_OPTS="${MAVEN_OPTS} -Dfrontend.npmDownloadRoot=http://registry.npm.taobao.org/npm/-/"
+export MAVEN_OPTS="${MAVEN_OPTS} -Dfrontend.nodeDownloadRoot=https://nodejs.org/dist/"
+export MAVEN_OPTS="${MAVEN_OPTS} -Dfrontend.npmDownloadRoot=https://registry.npmjs.org/npm/-/"
 
 echo "MAVEN_OPTS: ${MAVEN_OPTS}"
