@@ -30,11 +30,6 @@
             <username>${env.MAVEN_CENTRAL_USER}</username>
             <password>${env.MAVEN_CENTRAL_PASS}</password>
         </server>
-        <!--server>
-            <id>github-mvnsite</id>
-            <username>root</username>
-            <privateKey>${user.home}/.ssh/github-mvnsite</privateKey>
-        </server-->
     </servers>
 
     <activeProfiles>
@@ -63,14 +58,14 @@
             </properties>
             <repositories>
                 <repository>
-                    <id>nexus.github-releases</id>
+                    <id>github-nexus-releases</id>
                     <name>central releases</name>
                     <url>https://oss.sonatype.org/content/repositories/releases/</url>
                     <releases><enabled>true</enabled></releases>
                     <snapshots><enabled>false</enabled></snapshots>
                 </repository>
                 <repository>
-                    <id>nexus.github-snapshots</id>
+                    <id>github-nexus-snapshots</id>
                     <name>central snapshots</name>
                     <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
                     <releases><enabled>false</enabled></releases>
@@ -79,21 +74,21 @@
             </repositories>
             <pluginRepositories>
                 <pluginRepository>
-                    <id>nexus.github-releases</id>
+                    <id>github-nexus-releases</id>
                     <name>central releases</name>
                     <url>https://oss.sonatype.org/content/repositories/releases/</url>
                     <releases><enabled>true</enabled></releases>
                     <snapshots><enabled>false</enabled></snapshots>
                 </pluginRepository>
                 <pluginRepository>
-                    <id>nexus.github-snapshots</id>
+                    <id>github-nexus-snapshots</id>
                     <name>central snapshots</name>
                     <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
                     <releases><enabled>false</enabled></releases>
                     <snapshots><enabled>true</enabled></snapshots>
                 </pluginRepository>
                 <pluginRepository>
-                    <id>nexus.github-thirdparty</id>
+                    <id>github-nexus-thirdparty</id>
                     <name>central thirdparty</name>
                     <url>https://oss.sonatype.org/content/repositories/third-party-releases/</url>
                     <releases><enabled>true</enabled></releases>
