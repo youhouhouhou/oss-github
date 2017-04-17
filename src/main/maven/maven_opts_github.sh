@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 
 #GIT_SERVICE_HOST in .travis.yml
